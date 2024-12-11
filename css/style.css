@@ -1,0 +1,1533 @@
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        /* Style untuk layar tablet */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+    .hero-section {
+        display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+        text-align: center;
+        flex-direction: row; /* Kembali horizontal untuk layar besar */
+        justify-content: space-between;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats-section h3 {
+        font-size: 1.5rem;
+    }
+}
+  
+  /* Style untuk layar ponsel */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+
+        /* Navbar */
+        .navbar {
+            /* position: fixed; */
+            padding: 20px;
+            top: 0; /* Position the navbar at the top of the page */
+            width: 100%; 
+            height: 90px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow under navbar */
+            z-index: 1000; /* Ensures navbar stays above other elements */
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #002F6C;
+        }
+
+        .nav-link {
+            color: #666;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        nav .container ul li.active a {
+                color: #ffffff;
+        }
+
+        nav .container ul li.active {
+            background-color: #3b49df;
+            border-radius:30px;
+            transition: 0.3s;
+            }
+
+        .btn-login {
+            background-color: #002F6C;
+            color: white;
+            font-weight: 600;
+            padding: 8px 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            padding-left: 60px 0;
+            padding-right: 60px 0;
+            margin-bottom: 80px;
+            background-color: #f8f9fc;
+            display: flex;
+            flex-direction: column; /* Untuk layar kecil, tumpuk elemen */
+            align-items: center;
+            text-align: center; /* Pusatkan teks */
+            padding: 20px; /* Tambahkan padding untuk memberikan ruang */
+        }
+
+        .hero-content {
+            flex: 1;
+            margin-top: 60px;
+            padding: 20px;
+        }
+
+        .hero-button {
+            background-color: #e9f2fa;
+            color: #002F6C;
+            font-weight: 600;
+            padding: 8px 16px;
+            margin-top: 50px;
+            display: inline-block;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .hero-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #002F6C;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero-title span {
+            color: #ef5da8;
+        }
+
+        .hero-description {
+            color: #666;
+            font-size: 1rem;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons .btn-primary {
+            background-color: #002F6C;
+            border: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin-right: 15px;
+        }
+
+        .hero-buttons .btn-outline-primary {
+            border: 1px solid #002F6C;
+            color: #002F6C;
+            font-weight: 600;
+            padding: 10px 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            height: 410px;
+            width: 600px;
+            margin-top: 60px;
+        }
+
+        /* Fullscreen Background with Centered Login Form */
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+    background-image: url(../image/bg_login_reg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.breadcrumb .breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #007bff;
+}
+
+.donation-form {
+    max-width: 800px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-fd {
+    display: none;
+    
+}
+
+.section-fd.visible {
+    display: block;
+}
+
+.btn-primary-fd {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #3b5998;
+    color: white;
+}
+
+.donation-step {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.step-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E5EA;
+    color: #8E8E93;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.step-circle.active {
+    background-color: #CEE4FE;
+    color: #3b5998;
+}
+.fd-background {
+    margin-top: 120px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+        .stats-section {
+    position: relative;
+    top: -50px; /* Mengatur posisi mengambang */
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.stats-section h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+.stats-section p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+        /* Kategori Section */
+.kategori-section {
+    background-color: #CEE4FE;
+    padding: 60px 0;
+    margin-top: -110px;
+}
+.kategori-sectiong {
+    background-color: white;
+    padding: 60px 0;
+    margin-top: 50px;
+}
+
+.kategori-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.kategori-headerg {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.kategori-badge {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.kategori-badgeg {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.kategori-header h2 {
+    font-size: 2em;
+    color: #002F6C;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.kategori-header p {
+    color: #666;
+    font-size: 1em;
+    max-width: 500px;
+}
+
+/* Kategori Content */
+.kategori-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+.kategori-image img {
+    width: 290px;
+    height: 350px;
+}
+
+/* Cards */
+.kategori-cardsg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.kategori-card-linkg {
+    text-decoration: none; /* Hilangkan underline */
+    color: inherit; /* Menggunakan warna teks default */
+}
+
+.kategori-card-linkg:hover .kategori-card {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+/* Efek hover pada kartu */
+.kategori-cardg {
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.kategori-cardg:hover {
+    transform: translateY(-5px);
+}
+
+.kategori-cardg:hover {
+    transform: translateY(-5px);
+}
+
+.kategori-cardg .icon {
+    font-size: 2em;
+    color: #395E8A;
+    margin-bottom: 10px;
+}
+
+.kategori-cardg h3 {
+    font-size: 1.2em;
+    color: #002F6C;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.kategori-cardg p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.kategori-cardg a {
+    color: #395E8A;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.kategori-cardg span {
+    color: #395E8A;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.kategori-cardg a:hover {
+    text-decoration: underline;
+}
+
+.kategori-cardg:hover {
+    transform: translateY(-5px);
+}
+
+.kategori-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.kategori-card:hover {
+    transform: translateY(-5px);
+}
+
+.kategori-card .icon {
+    font-size: 2em;
+    color: #395E8A;
+    margin-bottom: 10px;
+}
+
+.kategori-card h3 {
+    font-size: 1.2em;
+    color: #002F6C;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.kategori-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.kategori-card a {
+    color: #395E8A;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.kategori-card a:hover {
+    text-decoration: underline;
+}
+
+/* Kategori Section */
+.kategori-section {
+    background-color: #CEE4FE;
+    padding: 60px 0;
+    margin-top: -110px;
+}
+
+.kategori-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.kategori-badge {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.kategori-header h2 {
+    font-size: 2em;
+    color: #002F6C;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.kategori-header p {
+    color: #666;
+    font-size: 1em;
+    max-width: 500px;
+}
+
+/* Kategori Content */
+.kategori-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+.kategori-image img {
+    width: 290px;
+    height: 350px;
+}
+
+/* Cards */
+.kategori-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.kategori-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.kategori-card:hover {
+    transform: translateY(-5px);
+}
+
+.kategori-card .icon {
+    font-size: 2em;
+    color: #395E8A;
+    margin-bottom: 10px;
+}
+
+.kategori-card h3 {
+    font-size: 1.2em;
+    color: #002F6C;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.kategori-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.kategori-card a {
+    color: #395E8A;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.kategori-card a:hover {
+    text-decoration: underline;
+}
+
+/* GALANG DANA STEP */
+/* Container styling */
+.containers {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    margin-top: 130px;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Step Styling */
+.step-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Step Number Styling */
+.step-number {
+    width: 35px;
+    height: 35px;
+    background-color: #CEE4FE;
+    color: #395E8A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Step Content Styling */
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ef5da8;
+}
+
+/* Button Step Styling */
+.btn-step {
+    margin-top: 5px;
+    padding: 10px 20px;
+    background-color: #395E8A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-step:hover {
+    background-color: #395E8A;
+}
+
+/* Submit Button */
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #395E8A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-submit[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Donasi Section */
+.donasi-section {
+    background-color: #F0F4FA;
+    padding: 60px 0;
+}
+
+.donasi-header {
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.donasi-badge {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.donasi-header h2 {
+    font-size: 2em;
+    color: #002F6C;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.donasi-header p {
+    color: #666;
+    font-size: 1em;
+    max-width: 500px;
+}
+
+.lihat-semua-kat {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #395E8A;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lihat-semua-kat:hover {
+    text-decoration: underline;
+}
+
+/* Donasi Cards */
+.donasi-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.donasi-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    text-align: left;
+}
+
+.donasi-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.donasi-card h3 {
+    font-size: 1.3em;
+    color: #395E8A;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.donasi-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background-color: #E6EEFF;
+    border-radius: 5px;
+    height: 8px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #395E8A;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.donasi-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.donasi-button {
+    background-color: #395E8A;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.donasi-button:hover {
+    background-color: #395E8A;
+}
+/* Button Styles */
+.btn-primary {
+    background-color: #395E8A;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #395E8A;
+    color: #fff;
+}
+
+/* Berita Section */
+.berita-section {
+    background-color: #CEE4FE;
+    padding: 60px 0;
+}
+
+.berita-header {
+    text-align: right;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.berita-badge {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.berita-header h2 {
+    font-size: 2em;
+    color: #002F6C;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.berita-header p {
+    color: #666;
+    font-size: 1em;
+    max-width: 700px;
+    margin-left: auto;
+}
+
+.lihat-semua {
+    position: absolute;
+    top: 10px;
+    right: 1140px;
+    color: #395E8A;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lihat-semua:hover {
+    text-decoration: underline;
+}
+
+/* Berita Cards */
+.berita-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.berita-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.berita-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.berita-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.berita-date {
+    font-size: 0.85em;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.berita-card h3 {
+    font-size: 1.2em;
+    color: #002F6C;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.berita-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.berita-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.berita-actions .like,
+.berita-actions .share {
+    align-items: flex-end;
+    color: #007BFF;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.berita-actions .like:hover,
+.berita-actions .share:hover {
+    text-decoration: underline;
+    align-items: flex-end;
+}
+
+/* Tentang Kami Section */
+.section-tentang-kami {
+    padding: 2rem 1rem;
+}
+
+.tentang-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b5998;
+    margin-bottom: 1rem;
+}
+
+.tentang-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.tentang-text {
+    font-size: 1rem;
+    color: #5f6a6a;
+    line-height: 1.6;
+    width: 700px;
+    margin-bottom: 1.5rem;
+}
+
+.baca-lanjut {
+    font-size: 0.9rem;
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.baca-lanjut:hover {
+    text-decoration: underline;
+}
+
+.tentang-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tentang-logo {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin-right:80px;
+    background-color: #f8f9fa;
+    
+}
+
+  /* Main container for the section */
+  .section-kata-mereka {
+    background-color: #CEE4FE;
+    padding: 3rem 1rem;
+}
+
+/* Right-aligning Title and Subtitle */
+.section-kata-mereka .section-header {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+.section-kata-mereka .section-header .title-badge {
+    background-color: #e6f1fb;
+    color: #5f6a6a;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+.section-kata-mereka .section-header .title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0.5rem 0;
+}
+.section-kata-mereka .section-header .subtitle {
+    font-size: 1rem;
+    color: #5f6a6a;
+    margin: 0;
+}
+
+/* Left-aligning Quote Box */
+.quote-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 220px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quote-box .quote-icon {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+}
+.quote-box .time-ago {
+    font-size: 0.875rem;
+    color: #a0a0a0;
+}
+.quote-box .quote-author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 0.5rem;
+}
+.quote-box .quote-text {
+    font-size: 1rem;
+    color: #5f6a6a;
+    margin: 0.5rem 0;
+}
+
+/* Footer with author and share icon */
+.quote-footer {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    gap: 0.5rem;
+}
+.quote-footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.quote-footer .author-name {
+    color: #2c3e50;
+    font-weight: 600;
+}
+.quote-footer .share-icon {
+    font-size: 1.25rem;
+    color: #b0b0b0;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+ /* Main container for the section */
+ .section-sponsor {
+    background-color: #f1f7fc;
+    padding: 3rem 1rem;
+}
+
+/* Left-aligned header */
+.section-sponsor h2 {
+    color: #2c3e50;
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+/* Sponsor logos card */
+.sponsor-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Sponsor logo style */
+.sponsor-card img {
+    max-width: 120px;
+    max-height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Thank you message */
+.thank-you-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #395E8A;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+/* Founder image container */
+.founder-photo {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder-photo img {
+    width: 100%;
+    max-width: 100%; /* Restrict the max width for large screens */
+   
+}
+        
+
+.footer-section {
+    background-color: #fff;
+    color: #004a7c;
+}
+
+.footer-section h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-section h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #004a7c;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.footer-logo {
+    color: #004a7c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #004a7c;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links-vertical li {
+    margin-bottom: 10px;
+}
+
+.social-links-vertical i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+hr {
+    border-color: rgba(0, 74, 124, 0.2);
+}
+
+.footer-section .text-center p {
+    color: #004a7c;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+}
+
+/* Menggeser kolom kanan */
+.offset-md-1 {
+    margin-left: auto;
+}
+
+/* Card Styles for Login and Register */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.card h3 {
+    color: #395E8A;
+    font-weight: bold;
+}
+
+.card .form-label {
+    font-weight: 500;
+    color: #395E8A;
+}
+
+.card .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card .form-control:focus {
+    border-color: #395E8A;
+    box-shadow: 0 0 5px rgba(36, 62, 142, 0.2);
+}
+
+.card button[type="submit"] {
+    background-color: #395E8A;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card button[type="submit"]:hover {
+    background-color: #395E8A;
+}
+
+/* Link styles */
+.card a {
+    color: #395E8A;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* profile css */
+
+
+.profile-section {
+    width: 60%;
+    padding-bottom: 20px;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-top: 130px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-background {
+    background-color: #d7e9fb;
+    padding: 20px;
+    text-align: center;
+    height: 110px;
+    padding-top: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.header-background h2 {
+    color: #3a578a;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.content-container {
+    display: flex;
+    padding: 20px;
+}
+
+.left-section {
+    width: 35%;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.profile-picture-container {
+    position: relative;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: pink;
+    border: 5px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.edit-button {
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.donation-history {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 15px;
+}
+
+.donation-history h3 {
+    font-size: 16px;
+    color: #3a578a;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.donation-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.donation-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.donation-info {
+    text-align: left;
+}
+
+.donation-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3a578a;
+    margin-bottom: 0px;
+}
+
+.donation-description {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 0px;
+}
+
+.donation-date {
+    font-size: 12px;
+    color: #888;
+}
+
+.view-more {
+    display: block;
+    text-align: left;
+    color: #3a578a;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.right-section {
+    width: 65%;
+    padding-left: 20px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+
+}
+
+.info-group label {
+    font-size: 14px;
+    color: #3a578a;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.input-with-icon .icon {
+    margin-right: 8px;
+    color: #888;
+}
+
+.input-with-icon input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+}
+
+.edit-icon {
+    margin-left: 8px;
+    cursor: pointer;
+    color: #3a578a;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3a578a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.body-pp {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f9fd;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pp-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+    background-image: url(../image/bg_login_reg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.pp-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Form Donasi */
+.card-fd {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.card-fd h3 {
+    color: #395E8A;
+    font-weight: bold;
+}
+
+.card-fd .form-label {
+    font-weight: 500;
+    color: #395E8A;
+}
+
+.card-fd .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-fd .form-control:focus {
+    border-color: #395E8A;
+    box-shadow: 0 0 5px rgba(36, 62, 142, 0.2);
+}
+
+.card-fd button[type="submit"] {
+    background-color: #395E8A;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-fd button[type="submit"]:hover {
+    background-color: #395E8A;
+}
+
+/* Link styles */
+.card-fd a {
+    color: #395E8A;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-fd a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 1.2rem;
+    }
+}

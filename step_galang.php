@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donacare - Galang Dana</title>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/js_login.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Breadcrumb Styling */
+        .breadcrumb {
+            background-color: #f8f9fa;
+            border-radius: 0.25rem;
+        }
+        .breadcrumb .breadcrumb-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .breadcrumb .breadcrumb-item.active {
+            color: #6c757d;
+            font-weight: bold;
+        }
+        .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+            content: ">";
+            color: #007bff;
+        }
+        .section-fd {
+            display: none;
+        }
+        .section-fd.visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <img class="imgnav" src="image/logo.png" alt="logo" style="width: 255px; height: 100px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index_login.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="galang.php">Galang Dana</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="containers">
+    <h3 class="text-center mb-4" style="font-weight: bold;">Galang Dana</h3>
+    <p class="text-center" style="">Selesaikan step by step formulir galang dana!</p>
+    <div class="step-containers">
+        <!-- Step 1 -->
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h4><span class="highlight">Langkah Pertama</span> - Isi Data Diri Anda</h4>
+                <button class="btn-step" onclick="window.location.href='galang/isi_data_diri.php'">ISI DATA DIRI</button>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h4><span class="highlight">Kedua</span> - Penerima</h4>
+                <button class="btn-step" onclick="window.location.href='galang/isi_penerima.php'">ISI PENERIMA</button>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h4><span class="highlight">Ketiga</span> - Target Donasi</h4>
+                <button class="btn-step" onclick="window.location.href='galang/isi_target_donasi.php'">ISI TARGET DONASI</button>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h4><span class="highlight">Keempat</span> - Buat Judul Berita</h4>
+                <button class="btn-step" onclick="window.location.href='galang/buat_judul_berita.php'">ISI JUDUL BERITA</button>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h4><span class="highlight">Terakhir</span> - Lengkapi Deskripsi</h4>
+                <button class="btn-step" onclick="window.location.href='galang/lengkapi_deskripsi.php'">LENGKAPI DESKRIPSI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center mt-4">
+        <button class="btn-step">KIRIM GALANG DANA</button>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer-section py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and About -->
+            <div class="col-md-4 mb-4">
+                <img src="image/logo.png" width="200px" height="80px">
+                <p>Kesempatan kecil dalam aksi sederhana yang dapat mengubah dunia.</p>
+                
+                <!-- Kritik dan Saran Section -->
+                <h5 class="mt-4">Kritik dan Saran</h5>
+                <input type="text" class="form-control mt-2" placeholder="Tulis kritik dan saran Anda">
+            </div>
+
+            <!-- Menu Links -->
+            <div class="col-md-2 mb-4 offset-md-1">
+                <h5>Menu</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Kategori</a></li>
+                    <li><a href="#">Donasi</a></li>
+                    <li><a href="#">Berita</a></li>
+                    <li><a href="#">Tentang kami</a></li>
+                </ul>
+            </div>
+
+            <!-- Kategori Links -->
+            <div class="col-md-2 mb-4">
+                <h5>Kategori</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Pendidikan</a></li>
+                    <li><a href="#">Bencana Alam</a></li>
+                    <li><a href="#">Kesehatan</a></li>
+                    <li><a href="#">Anak-anak</a></li>
+                    <li><a href="#">Lingkungan</a></li>
+                    <li><a href="#">Layanan Sosial</a></li>
+                </ul>
+            </div>
+
+           <!-- Social Media Links in Vertical List -->
+           <div class="col-md-2 mb-4">
+            <h5>Follow us on</h5>
+            <ul class="list-unstyled social-links-vertical">
+                <li><a href="#"><i class="bi bi-instagram"></i><img src="image/IG.png"><p style="color: white;">p</p> Instagram</a></li>
+                <li><a href="#"><i class="bi bi-facebook"></i><img src="image/fb.png"><p style="color: white;">p</p> Facebook</a></li>
+                <li><a href="#"><i class="bi bi-youtube"></i><img src="image/yt.png"><p style="color: white;">p</p> YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+        
+        <hr>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            <p>&copy; 2024 Donacare. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

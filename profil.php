@@ -1,0 +1,212 @@
+<?php
+include 'db_connection.php';
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit;
+}
+
+// Retrieve user information
+$username = $_SESSION['username'];
+$sql = "SELECT * FROM users WHERE username='$username'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+} else {
+    echo "User not found.";
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="body-pp">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <img class="imgnav" src="image/logo.png" alt="logo" style="width: 255px; height: 100px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index_login.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index_login.php">Kategori</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#donasi">Donasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#berita">Berita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentangkami">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="profil.php">Profil</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="center-container">
+<div class="profile-section" >
+        <!-- Header Section -->
+        <div class="header-background">
+            <h2>PROFIL</h2>
+        </div>
+        
+        <div class="content-container">
+            <!-- Left Profile Picture and Donation History -->
+            <div class="left-section">
+                <div class="profile-picture-container">
+                    <img src="image/pp.png" alt="Profile Picture" class="profile-picture">
+                    <button class="edit-button">✎</button>
+                </div>
+
+                <div class="donation-history">
+                    <h3>Riwayat Donasi</h3>
+                    <div class="donation-card">
+                        <img src="image/donasi1.png" alt="Donation Image" class="donation-image">
+                        <div class="donation-info">
+                            <p class="donation-title">Bantu Korban Longsor</p>
+                            <p class="donation-description">Masyarakat bersatu dalam memberikan bantuan kepada...</p>
+                            <p class="donation-date">Sabtu, 01 Juli 2023</p>
+                        </div>
+                    </div>
+                    <div class="donation-card">
+                        <img src="image/donasi2.png" alt="Donation Image" class="donation-image">
+                        <div class="donation-info">
+                            <p class="donation-title">Bantu Korban Longsor</p>
+                            <p class="donation-description">Masyarakat bersatu dalam memberikan bantuan kepada...</p>
+                            <p class="donation-date">Sabtu, 01 Juli 2023</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-more">Lihat Semua</a>
+                </div>
+            </div>
+
+            <!-- Right Profile Information -->
+            <div class="right-section">
+                <div class="info-group">
+                    <label>Nama Lengkap</label>
+                    <div class="input-with-icon">
+                        <i class="icon">👤</i>
+                        <input type="text" id="nama_lengkap" value="<?php echo $user['nama_lengkap']; ?>" readonly>
+                        <i class="edit-icon">✎</i>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <label>Email</label>
+                    <div class="input-with-icon">
+                        <i class="icon">✉️</i>
+                        <input type="email" id="email" value="<?php echo $user['email']; ?>" readonly>
+                        <i class="edit-icon">✎</i>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <label>Username</label>
+                    <div class="input-with-icon">
+                        <i class="icon">👤</i>
+                        <input type="text"  id="username" value="<?php echo $user['username']; ?>" readonly>
+                        <i class="edit-icon">✎</i>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <label>Password</label>
+                    <div class="input-with-icon">
+                        <i class="icon">🔒</i>
+                        <input type="password" id="password" value="<?php echo $user['password']; ?>" readonly>
+                        <i class="edit-icon">✎</i>
+                    </div>
+                </div>
+                <form action="logout.php" method="post">
+                    <button type="submit" class="logout-button">LOGOUT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+
+<!-- Footer Section -->
+<footer class="footer-section py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and About -->
+            <div class="col-md-4 mb-4">
+                <img src="image/logo.png" width="200px" height="80px">
+                <p>Kesempatan kecil dalam aksi sederhana yang dapat mengubah dunia.</p>
+                
+                <!-- Kritik dan Saran Section -->
+                <h5 class="mt-4">Kritik dan Saran</h5>
+                <input type="text" class="form-control mt-2" placeholder="Tulis kritik dan saran Anda">
+            </div>
+
+            <!-- Menu Links -->
+            <div class="col-md-2 mb-4 offset-md-1">
+                <h5>Menu</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Kategori</a></li>
+                    <li><a href="#">Donasi</a></li>
+                    <li><a href="#">Berita</a></li>
+                    <li><a href="#">Tentang kami</a></li>
+                </ul>
+            </div>
+
+            <!-- Kategori Links -->
+            <div class="col-md-2 mb-4">
+                <h5>Kategori</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Pendidikan</a></li>
+                    <li><a href="#">Bencana Alam</a></li>
+                    <li><a href="#">Kesehatan</a></li>
+                    <li><a href="#">Anak-anak</a></li>
+                    <li><a href="#">Lingkungan</a></li>
+                    <li><a href="#">Layanan Sosial</a></li>
+                </ul>
+            </div>
+
+           <!-- Social Media Links in Vertical List -->
+           <div class="col-md-2 mb-4">
+            <h5>Follow us on</h5>
+            <ul class="list-unstyled social-links-vertical">
+                <li><a href="#"><i class="bi bi-instagram"></i><img src="image/IG.png"><p style="color: white;">p</p> Instagram</a></li>
+                <li><a href="#"><i class="bi bi-facebook"></i><img src="image/fb.png"><p style="color: white;">p</p> Facebook</a></li>
+                <li><a href="#"><i class="bi bi-youtube"></i><img src="image/yt.png"><p style="color: white;">p</p> YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+        
+        <hr>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            <p>&copy; 2024 Donacare. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

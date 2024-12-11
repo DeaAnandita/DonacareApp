@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatmap Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="heatmap-container" style="position: relative; width: 100%; height: 600px;">
+        <canvas id="heatmap-canvas" style="width: 100%; height: 600px;"></canvas>
+    </div>
+    <script src="js/simpleheat.js"></script>
+    <script>
+        // Setup
+        const canvas = document.getElementById('heatmap-canvas');
+        const ctx = canvas.getContext('2d');
+        const heat = simpleheat(canvas);
+
+        canvas.width = window.innerWidth;
+        canvas.height = 600;
+
+        const clicks = [];
+
+        // Event Listener untuk mengumpulkan data klik
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            clicks.push([x, y, 1]); // x, y, intensitas
+            console.log(clicks);
+            renderHeatmap();
+        });
+
+        function renderHeatmap() {
+            heat.data(clicks).max(18);
+            heat.draw(0.05);
+        }
+    </script>
+</body>
+</html>
