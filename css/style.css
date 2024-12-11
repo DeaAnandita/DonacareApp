@@ -16,7 +16,9 @@
     .hero-section {
         display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
+        text-align: center;
         flex-direction: row; /* Kembali horizontal untuk layar besar */
         justify-content: space-between;
     }
@@ -87,6 +89,8 @@
             background-color: #f8f9fc;
             display: flex;
             flex-direction: column; /* Untuk layar kecil, tumpuk elemen */
+            align-items: center;
+            text-align: center; /* Pusatkan teks */
             padding: 20px; /* Tambahkan padding untuk memberikan ruang */
         }
 
