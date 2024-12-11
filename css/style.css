@@ -13,7 +13,13 @@
     body {
       font-size: 14px;
     }
-    
+    .hero-section {
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+        flex-direction: row; /* Kembali horizontal untuk layar besar */
+        justify-content: space-between;
+    }
 
     .hero-image img {
         width: 100%;
