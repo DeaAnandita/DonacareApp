@@ -17,29 +17,38 @@ body {
 
 /* Navbar */
 .navbar {
-    padding: 20px;
-    width: 100%;
-    height: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
-.navbar-brand {
-    font-weight: 700;
-    color: #002F6C;
-}
+
+/* Navbar Link */
 .nav-link {
-    color: #666;
+    color: #002F6C;
     font-weight: 500;
     margin-right: 20px;
 }
+
+.nav-link:hover {
+    color: #3b49df;
+}
+
+/* Tombol Login */
 .btn-login {
     background-color: #002F6C;
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     padding: 8px 20px;
+    border-radius: 5px;
 }
 
-        nav .container ul li.active a {
+.btn-login:hover {
+    background-color: #3b49df;
+}
+
+ 
+
+
+        /* nav .container ul li.active a {
                 color: #ffffff;
         }
 
@@ -54,7 +63,7 @@ body {
             color: white;
             font-weight: 600;
             padding: 8px 20px;
-        }
+        } */
 
 /* Hero Section */
 .hero-section {
@@ -118,6 +127,8 @@ body {
             color: #002F6C;
             font-weight: 600;
             padding: 10px 20px;
+            margin-bottom: 10px;
+            margin-left: 10px;
         }
 
         .hero-image {
