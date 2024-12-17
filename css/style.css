@@ -1,66 +1,43 @@
-
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 0;
-            
-        }
-
-        /* Style untuk layar tablet */
-@media (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-    .hero-section {
-        display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-        text-align: center;
-        flex-direction: row; /* Kembali horizontal untuk layar besar */
-        justify-content: space-between;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .stats-section h3 {
-        font-size: 1.5rem;
-    }
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
 }
-  
-  /* Style untuk layar ponsel */
-  @media (max-width: 480px) {
-    body {
-      font-size: 12px;
-    }
-  }
 
-        /* Navbar */
-        .navbar {
-            /* position: fixed; */
-            padding: 20px;
-            top: 0; /* Position the navbar at the top of the page */
-            width: 100%; 
-            height: 90px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow under navbar */
-            z-index: 1000; /* Ensures navbar stays above other elements */
-        }
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .navbar-brand {
-            font-weight: 700;
-            color: #002F6C;
-        }
-
-        .nav-link {
-            color: #666;
-            font-weight: 500;
-            margin-right: 20px;
-        }
+/* Navbar */
+.navbar {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.navbar-brand {
+    font-weight: 700;
+    color: #002F6C;
+}
+.nav-link {
+    color: #666;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.btn-login {
+    background-color: #002F6C;
+    color: white;
+    font-weight: 600;
+    padding: 8px 20px;
+}
 
         nav .container ul li.active a {
                 color: #ffffff;
@@ -79,33 +56,29 @@
             padding: 8px 20px;
         }
 
-        /* Hero Section */
-        .hero-section {
-            display: flex;
-            align-items: center;
-            padding-left: 60px 0;
-            padding-right: 60px 0;
-            margin-bottom: 80px;
-            background-color: #f8f9fc;
-            display: flex;
-            flex-direction: column; /* Untuk layar kecil, tumpuk elemen */
-            align-items: center;
-            text-align: center; /* Pusatkan teks */
-            padding: 20px; /* Tambahkan padding untuk memberikan ruang */
-        }
-
-        .hero-content {
-            flex: 1;
-            margin-top: 60px;
-            padding: 20px;
-        }
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 80px;
+    background-color: #f8f9fc;
+}
+.hero-content {
+    flex: 1;
+    padding: 20px;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
 
         .hero-button {
             background-color: #e9f2fa;
             color: #002F6C;
             font-weight: 600;
             padding: 8px 16px;
-            margin-top: 50px;
+            margin-top: 140px;
             display: inline-block;
             border-radius: 4px;
             margin-bottom: 20px;
@@ -154,6 +127,11 @@
             height: 410px;
             width: 600px;
             margin-top: 60px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
         }
 
         /* Fullscreen Background with Centered Login Form */
@@ -246,8 +224,9 @@
     align-items: center;
     
 }
-
-        .stats-section {
+ 
+/* Stats Section */
+.stats-section {
     position: relative;
     top: -50px; /* Mengatur posisi mengambang */
     background-color: #f0f8ff;
@@ -256,7 +235,6 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .stats-section h3 {
-    font-weight: bold;
     font-size: 1.5rem;
     color: #333;
 }
@@ -265,7 +243,86 @@
     color: #666;
 }
 
-        /* Kategori Section */
+/* Kategori Section */
+.kategori-section {
+    background-color: #CEE4FE;
+    padding: 60px 0;
+}
+.kategori-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.kategori-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.kategori-card h3 {
+    font-size: 1.2rem;
+}
+.kategori-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.kategori-sectiong {
+    background-color: white;
+    padding: 60px 0;
+    margin-top: 50px;
+}
+
+.kategori-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.kategori-headerg {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.kategori-badge {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.kategori-badgeg {
+    display: inline-block;
+    background-color: #E6EEFF;
+    color: #002F6C;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.kategori-header h2 {
+    font-size: 2em;
+    color: #002F6C;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.kategori-header p {
+    color: #666;
+    font-size: 1em;
+    max-width: 500px;
+}
+
+/* Kategori Section */
 .kategori-section {
     background-color: #CEE4FE;
     padding: 60px 0;
@@ -351,8 +408,8 @@
 }
 
 .kategori-card-linkg {
-    text-decoration: none; /* Hilangkan underline */
-    color: inherit; /* Menggunakan warna teks default */
+    text-decoration: none;
+    color: inherit;
 }
 
 .kategori-card-linkg:hover .kategori-card {
@@ -370,10 +427,6 @@
     text-align: left;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-}
-
-.kategori-cardg:hover {
-    transform: translateY(-5px);
 }
 
 .kategori-cardg:hover {
@@ -415,10 +468,6 @@
 
 .kategori-cardg a:hover {
     text-decoration: underline;
-}
-
-.kategori-cardg:hover {
-    transform: translateY(-5px);
 }
 
 .kategori-card {
@@ -464,6 +513,32 @@
 .kategori-card a:hover {
     text-decoration: underline;
 }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .kategori-content {
+        flex-direction: column; /* Ubah susunan menjadi kolom */
+        align-items: center; /* Tengahkan elemen */
+    }
+    
+    .kategori-image img {
+        display: none; /* Hilangkan gambar di layar kecil */
+    }
+    
+    .kategori-cardsg {
+        grid-template-columns: 1fr; /* Hanya 1 kolom */
+    }
+
+    .kategori-header h2 {
+        font-size: 1.5em; /* Sesuaikan ukuran teks */
+    }
+
+    .kategori-header p {
+        font-size: 0.9em;
+    }
+}
+
+
 
 /* Kategori Section */
 .kategori-section {
@@ -659,6 +734,24 @@
     background-color: #F0F4FA;
     padding: 60px 0;
 }
+.donasi-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.donasi-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+.donasi-card h3 {
+    font-size: 1.3rem;
+}
+.donasi-card p {
+    font-size: 1rem;
+}
 
 .donasi-header {
     text-align: left;
@@ -704,38 +797,10 @@
 }
 
 /* Donasi Cards */
-.donasi-cards {
-    display: flex;
-    gap: 20px;
-}
-
-.donasi-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 350px;
-    padding: 20px;
-    text-align: left;
-}
 
 .donasi-card img {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.donasi-card h3 {
-    font-size: 1.3em;
-    color: #395E8A;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.donasi-card p {
-    color: #666;
-    font-size: 0.9em;
     margin-bottom: 15px;
 }
 
@@ -794,7 +859,24 @@
 /* Berita Section */
 .berita-section {
     background-color: #CEE4FE;
-    padding: 60px 0;
+    padding: 80px 0;
+}
+.berita-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.berita-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.berita-card h3 {
+    font-size: 1.2rem;
+    color: #002F6C;
 }
 
 .berita-header {
@@ -812,6 +894,7 @@
     border-radius: 5px;
     font-size: 0.9em;
     margin-bottom: 10px;
+    margin-right: 15px;
 }
 
 .berita-header h2 {
@@ -819,6 +902,7 @@
     color: #002F6C;
     font-weight: 700;
     margin-bottom: 10px;
+    margin-right: 15px;
 }
 
 .berita-header p {
@@ -826,6 +910,7 @@
     font-size: 1em;
     max-width: 700px;
     margin-left: auto;
+    margin-right: 15px;
 }
 
 .lihat-semua {
@@ -842,22 +927,6 @@
 }
 
 /* Berita Cards */
-.berita-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-}
-
-.berita-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-}
 
 .berita-card img {
     width: 100%;
@@ -874,13 +943,6 @@
     font-size: 0.85em;
     color: #999;
     margin-bottom: 8px;
-}
-
-.berita-card h3 {
-    font-size: 1.2em;
-    color: #002F6C;
-    font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .berita-card p {
@@ -911,28 +973,26 @@
 
 /* Tentang Kami Section */
 .section-tentang-kami {
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
 }
-
 .tentang-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: #3b5998;
     margin-bottom: 1rem;
 }
+.tentang-text {
+    font-size: 1rem;
+    color: #5f6a6a;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
 
 .tentang-subtitle {
     font-size: 2rem;
     font-weight: 700;
     color: #2c3e50;
-    margin-bottom: 1.5rem;
-}
-
-.tentang-text {
-    font-size: 1rem;
-    color: #5f6a6a;
-    line-height: 1.6;
-    width: 700px;
     margin-bottom: 1.5rem;
 }
 
@@ -958,7 +1018,6 @@
     padding: 1rem;
     margin-right:80px;
     background-color: #f8f9fa;
-    
 }
 
   /* Main container for the section */
@@ -1051,10 +1110,18 @@
     margin-left: auto;
 }
 
- /* Main container for the section */
- .section-sponsor {
+/* Sponsor Section */
+.section-sponsor {
     background-color: #f1f7fc;
     padding: 3rem 1rem;
+}
+
+.sponsor-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Left-aligned header */
@@ -1066,17 +1133,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* Sponsor logos card */
-.sponsor-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
 
 /* Sponsor logo style */
 .sponsor-card img {
@@ -1247,12 +1303,65 @@ hr {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Responsiveness */
 @media (max-width: 768px) {
-    .navbar .navbar-brand {
-        font-size: 1.2rem;
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        padding: 10px;
+    }
+    .stats-section {
+        padding: 10px;
+    }
+    .kategori-section {
+        padding: 30px 0;
+    }
+    .donasi-section {
+        padding: 30px 0;
+    }
+    .berita-section {
+        padding: 30px 0;
+    }
+    .hero-image {
+        display: none;
+    }
+    .tentang-logo {
+        display: none;
     }
 }
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .kategori-cards,
+    .donasi-cards,
+    .berita-cards {
+        grid-template-columns: 1fr;
+    }
+    .kategori-card h3, .donasi-card h3, .berita-card h3 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .hero-image {
+        display: none;
+    }
+    .tentang-logo {
+        display: none;
+    }
+    .thank-you-message {
+        font-size: 18px;
+    }
+    
+}
+
+
 
 
 /* profile css */
