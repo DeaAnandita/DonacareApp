@@ -19,7 +19,7 @@ body {
 .navbar {
     padding: 20px;
     width: 100%;
-    height: auto;
+    height: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -78,7 +78,7 @@ body {
             color: #002F6C;
             font-weight: 600;
             padding: 8px 16px;
-            margin-top: 140px;
+            margin-top: 100px;
             display: inline-block;
             border-radius: 4px;
             margin-bottom: 20px;
@@ -110,7 +110,7 @@ body {
             border: none;
             font-weight: 600;
             padding: 10px 20px;
-            margin-right: 15px;
+            margin-bottom: 10px;
         }
 
         .hero-buttons .btn-outline-primary {
@@ -277,7 +277,9 @@ body {
 
 .kategori-header {
     text-align: left;
-    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    
 }
 
 .kategori-headerg {
@@ -582,6 +584,7 @@ body {
     display: flex;
     gap: 30px;
     align-items: flex-end;
+    margin-top: -25px;
 }
 
 .kategori-image img {
@@ -757,6 +760,7 @@ body {
     text-align: left;
     margin-bottom: 30px;
     position: relative;
+    margin-left: 15px;
 }
 
 .donasi-badge {
@@ -871,8 +875,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    
 }
 .berita-card h3 {
     font-size: 1.2rem;
@@ -1339,15 +1342,17 @@ hr {
     .navbar {
         flex-wrap: wrap;
         text-align: center;
+
     }
     .kategori-cards,
     .donasi-cards,
     .berita-cards {
         grid-template-columns: 1fr;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .kategori-card h3, .donasi-card h3, .berita-card h3 {
         font-size: 1rem;
-        padding: 10px;
     }
     .hero-image {
         display: none;
@@ -1358,7 +1363,17 @@ hr {
     .thank-you-message {
         font-size: 18px;
     }
-    
+    .stats-section p {
+        font-size: 13px;
+    }
+    .stats-section h3 {
+        font-size: 20px;
+    }
+    .stats-section {
+        padding: 20px;
+        position: relative;
+        top: -50px;
+    }
 }
 
 
