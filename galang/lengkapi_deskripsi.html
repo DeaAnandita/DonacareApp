@@ -20,8 +20,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index_login.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="../galang.php">Galang Dana</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index_login.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../galang.html">Galang Dana</a></li>
             </ul>
         </div>
     </div>
@@ -30,34 +30,22 @@
 <!-- Form Section -->
 <div class="fd-background d-flex justify-content-center align-items-center">
     <div class="card p-4" style="width: 100%; max-width: 700px;">
-        <h3 class="text-center mb-4">Form Data Diri</h3>
+        <h3 class="text-center mb-4">Form Lengkapi Deskripsi</h3>
         <p style="margin-top: -20px; margin-bottom: 25px; color: grey; text-align: center;">Isilah data diri dibawah dengan benar!</p>
         <form method="post">
             <div class="mb-3">
-                <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="" name="nama_lengkap" required placeholder="Masukkan Nama Lengkap">
+                <label for="deskripsi" class="form-label">Deskripsi Lengkap Kampanye</label>
+                <input type="text" class="form-control" id="" name="deskripsi" required placeholder="Deskripsi Lengkap Kampanye">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="" name="email" required placeholder="Masukkan Email">
+                <label for="dokumen" class="form-label">Dokumen Atau Foto Pendukung</label>
+                <input type="text" class="form-control" id="" name="dokumen" required placeholder="Dokumen Atau Foto Pendukung">
             </div>
             <div class="mb-3">
-                <label for="nomor_telepon" class="form-label">Nomor Telepon</label>
-                <input type="text" class="form-control" id="" name="nomor_telepon" required placeholder="Masukkan Nomor Telepon">
+                <label for="pesan" class="form-label">Pesan Untuk Para Donatur</label>
+                <input type="text" class="form-control" id="" name="pesan" required placeholder="Pesan Untuk Para Donatur">
             </div>
-            <div class="mb-3">
-                <label for="alamat_lengkap" class="form-label">Alamat Lengkap</label>
-                <input type="text" class="form-control" id="" name="alamat_lengkap" required placeholder="Masukkan Alamat Lengkap">
-            </div>
-            <div class="mb-3">
-                <label for="identitas" class="form-label">Identitas Diri (KTP/SIM/Paspor)</label>
-                <input type="file" class="form-control" id="" name="identitas" required placeholder="Identitas Diri (KTP/SIM/Paspor)">
-            </div>
-            <div class="mb-3">
-                <label for="deskripsi_singakat" class="form-label">Deskripsi Singkagt Tentang Anda</label>
-                <input type="text" class="form-control" id="" name="deskripsi_singakat" required placeholder="Deskripsi Singkagt Tentang Anda" style="height: 100px;">
-            </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.php'">Kirim</button>
+            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step_galang.html'">Kirim</button>
         </form>
     </div>
 </div>

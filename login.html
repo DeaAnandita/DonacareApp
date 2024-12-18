@@ -1,12 +1,36 @@
+
+<?php
+include 'db_connection.php';
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Retrieve user from database
+    $sql = "SELECT * FROM users WHERE username='$username'";
+    $result = $conn->query($sql);
+
+    if($result > 0){
+        $_SESSION['username'] = $username;
+        $_SESSION['status'] = "logged";
+        header("location:index_login.php");
+    }else{
+            echo "Invalid username or password.";
+        }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donacare - Landing Page</title>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,43 +38,51 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <img class="imgnav" src="../image/logo.png" alt="logo" style="width: 255px; height: 100px;">
+        <img class="imgnav" src="image/logo.png" alt="logo" style="width: 255px; height: 100px;">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index_login.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="../galang.php">Galang Dana</a></li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index_login.php">Kategori</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#donasi">Donasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#berita">Berita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#tentangkami">Tentang Kami</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Form Section -->
-<div class="fd-background d-flex justify-content-center align-items-center">
-    <div class="card p-4" style="width: 100%; max-width: 700px;">
-        <h3 class="text-center mb-4">Form Target Donasi</h3>
-        <p style="margin-top: -20px; margin-bottom: 25px; color: grey; text-align: center;">Isilah data diri dibawah dengan benar!</p>
+<!-- Login Form Section -->
+<div class="login-background d-flex justify-content-center align-items-center">
+    <div class="card p-4" style="width: 100%; max-width: 400px;">
+        <h3 class="text-center mb-4">Login</h3>
+        <p style="margin-top: -20px; margin-bottom: 25px; color: grey; text-align: center;">Masukkan username dan password anda!</p>
         <form method="post">
             <div class="mb-3">
-                <label for="total_dana" class="form-label">Total Dana Yang Ingin Dicapai(Rp)</label>
-                <input type="text" class="form-control" id="" name="total_dana" required placeholder="Total Dana Yang Ingin Dicapai(Rp)">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="" name="username" required placeholder="Masukkan username">
             </div>
             <div class="mb-3">
-                <label for="durasi_kampanye" class="form-label">Durasi Kampanye(Hari)</label>
-                <input type="text" class="form-control" id="" name="durasi_kampanye" required placeholder="Durasi Kampanye(Hari)">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="" name="password" required placeholder="Masukkan password">
             </div>
-            <div class="mb-3">
-                <label for="kategori_penggalangan" class="form-label">Kategori Penggalangan Dana</label>
-                <input type="text" class="form-control" id="" name="kategori_penggalangan" required placeholder="Kategori Penggalangan Dana">
-            </div>
-            <div class="mb-3">
-                <label for="penggunaan_dana" class="form-label">Penggunaan Dana</label>
-                <input type="text" class="form-control" id="" name="penggunaan_dana" required placeholder="Penggunaan Dana">
-            </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.php'">Kirim</button>
+            <button type="submit" class="btn btn-primary w-100">Masuk<a href="index_login.html">a</a></button>
         </form>
+        <p class="text-center mt-3">
+            Belum punya akun? <a href="register.html">Daftar di sini</a>
+        </p>
     </div>
 </div>
 
@@ -67,7 +99,7 @@
         <div class="row">
             <!-- Logo and About -->
             <div class="col-md-4 mb-4">
-                <img src="../image/logo.png" width="200px" height="80px">
+                <img src="image/logo.png" width="200px" height="80px">
                 <p>Kesempatan kecil dalam aksi sederhana yang dapat mengubah dunia.</p>
                 
                 <!-- Kritik dan Saran Section -->
@@ -104,9 +136,9 @@
            <div class="col-md-2 mb-4">
             <h5>Follow us on</h5>
             <ul class="list-unstyled social-links-vertical">
-                <li><a href="#"><i class="bi bi-instagram"></i><img src="../image/IG.png"><p style="color: white;">p</p> Instagram</a></li>
-                <li><a href="#"><i class="bi bi-facebook"></i><img src="../image/fb.png"><p style="color: white;">p</p> Facebook</a></li>
-                <li><a href="#"><i class="bi bi-youtube"></i><img src="../image/yt.png"><p style="color: white;">p</p> YouTube</a></li>
+                <li><a href="#"><i class="bi bi-instagram"></i><img src="image/IG.png"><p style="color: white;">p</p> Instagram</a></li>
+                <li><a href="#"><i class="bi bi-facebook"></i><img src="image/fb.png"><p style="color: white;">p</p> Facebook</a></li>
+                <li><a href="#"><i class="bi bi-youtube"></i><img src="image/yt.png"><p style="color: white;">p</p> YouTube</a></li>
             </ul>
         </div>
     </div>

@@ -20,8 +20,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index_login.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="../galang.php">Galang Dana</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index_Login.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../galang.html">Galang Dana</a></li>
             </ul>
         </div>
     </div>
@@ -30,22 +30,30 @@
 <!-- Form Section -->
 <div class="fd-background d-flex justify-content-center align-items-center">
     <div class="card p-4" style="width: 100%; max-width: 700px;">
-        <h3 class="text-center mb-4">Form Lengkapi Deskripsi</h3>
+        <h3 class="text-center mb-4">Form Penerima</h3>
         <p style="margin-top: -20px; margin-bottom: 25px; color: grey; text-align: center;">Isilah data diri dibawah dengan benar!</p>
         <form method="post">
             <div class="mb-3">
-                <label for="deskripsi" class="form-label">Deskripsi Lengkap Kampanye</label>
-                <input type="text" class="form-control" id="" name="deskripsi" required placeholder="Deskripsi Lengkap Kampanye">
+                <label for="nama_penerima" class="form-label">Nama Penerima Manfaat</label>
+                <input type="text" class="form-control" id="" name="nama_penerima" required placeholder="Masukkan Nama Penerima Manfaat">
             </div>
             <div class="mb-3">
-                <label for="dokumen" class="form-label">Dokumen Atau Foto Pendukung</label>
-                <input type="text" class="form-control" id="" name="dokumen" required placeholder="Dokumen Atau Foto Pendukung">
+                <label for="jenis_penerima" class="form-label">Jenis Penerima Manfaat</label>
+                <input type="text" class="form-control" id="" name="jenis_penerima" required placeholder="Masukkan Jenis Penerima Manfaat">
             </div>
             <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan Untuk Para Donatur</label>
-                <input type="text" class="form-control" id="" name="pesan" required placeholder="Pesan Untuk Para Donatur">
+                <label for="alamat_penerima" class="form-label">Alamat Penerima Manfaat</label>
+                <input type="text" class="form-control" id="" name="alamat_penerima" required placeholder="Masukkan Alamat Penerima Manfaat">
             </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step_galang.php'">Kirim</button>
+            <div class="mb-3">
+                <label for="nomor_telepon" class="form-label">Nomor Telepon Penerima Manfaat</label>
+                <input type="text" class="form-control" id="" name="nomor_telepon" required placeholder="Masukkan Nomor Telepon Manfaat">
+            </div>
+            <div class="mb-3">
+                <label for="bukti" class="form-label">Bukti atau Dokumen Pendukung Penerima Manfaat</label>
+                <input type="file" class="form-control" id="" name="bukti" required placeholder="Bukti atau Dokumen Pendukung Penerima Manfaat">
+            </div>
+            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.html'">Kirim</button>
         </form>
     </div>
 </div>

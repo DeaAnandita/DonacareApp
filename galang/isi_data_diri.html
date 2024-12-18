@@ -20,8 +20,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index_Login.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="../galang.php">Galang Dana</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index_login.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../galang.html">Galang Dana</a></li>
             </ul>
         </div>
     </div>
@@ -30,30 +30,34 @@
 <!-- Form Section -->
 <div class="fd-background d-flex justify-content-center align-items-center">
     <div class="card p-4" style="width: 100%; max-width: 700px;">
-        <h3 class="text-center mb-4">Form Penerima</h3>
+        <h3 class="text-center mb-4">Form Data Diri</h3>
         <p style="margin-top: -20px; margin-bottom: 25px; color: grey; text-align: center;">Isilah data diri dibawah dengan benar!</p>
         <form method="post">
             <div class="mb-3">
-                <label for="nama_penerima" class="form-label">Nama Penerima Manfaat</label>
-                <input type="text" class="form-control" id="" name="nama_penerima" required placeholder="Masukkan Nama Penerima Manfaat">
+                <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="" name="nama_lengkap" required placeholder="Masukkan Nama Lengkap">
             </div>
             <div class="mb-3">
-                <label for="jenis_penerima" class="form-label">Jenis Penerima Manfaat</label>
-                <input type="text" class="form-control" id="" name="jenis_penerima" required placeholder="Masukkan Jenis Penerima Manfaat">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="" name="email" required placeholder="Masukkan Email">
             </div>
             <div class="mb-3">
-                <label for="alamat_penerima" class="form-label">Alamat Penerima Manfaat</label>
-                <input type="text" class="form-control" id="" name="alamat_penerima" required placeholder="Masukkan Alamat Penerima Manfaat">
+                <label for="nomor_telepon" class="form-label">Nomor Telepon</label>
+                <input type="text" class="form-control" id="" name="nomor_telepon" required placeholder="Masukkan Nomor Telepon">
             </div>
             <div class="mb-3">
-                <label for="nomor_telepon" class="form-label">Nomor Telepon Penerima Manfaat</label>
-                <input type="text" class="form-control" id="" name="nomor_telepon" required placeholder="Masukkan Nomor Telepon Manfaat">
+                <label for="alamat_lengkap" class="form-label">Alamat Lengkap</label>
+                <input type="text" class="form-control" id="" name="alamat_lengkap" required placeholder="Masukkan Alamat Lengkap">
             </div>
             <div class="mb-3">
-                <label for="bukti" class="form-label">Bukti atau Dokumen Pendukung Penerima Manfaat</label>
-                <input type="file" class="form-control" id="" name="bukti" required placeholder="Bukti atau Dokumen Pendukung Penerima Manfaat">
+                <label for="identitas" class="form-label">Identitas Diri (KTP/SIM/Paspor)</label>
+                <input type="file" class="form-control" id="" name="identitas" required placeholder="Identitas Diri (KTP/SIM/Paspor)">
             </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.php'">Kirim</button>
+            <div class="mb-3">
+                <label for="deskripsi_singakat" class="form-label">Deskripsi Singkagt Tentang Anda</label>
+                <input type="text" class="form-control" id="" name="deskripsi_singakat" required placeholder="Deskripsi Singkagt Tentang Anda" style="height: 100px;">
+            </div>
+            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.html'">Kirim</button>
         </form>
     </div>
 </div>

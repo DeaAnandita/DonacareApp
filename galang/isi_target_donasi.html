@@ -20,8 +20,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index_login.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="../galang.php">Galang Dana</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index_login.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../galang.html">Galang Dana</a></li>
             </ul>
         </div>
     </div>
@@ -30,14 +30,26 @@
 <!-- Form Section -->
 <div class="fd-background d-flex justify-content-center align-items-center">
     <div class="card p-4" style="width: 100%; max-width: 700px;">
-        <h3 class="text-center mb-4">Form Judul Galang Dana</h3>
+        <h3 class="text-center mb-4">Form Target Donasi</h3>
         <p style="margin-top: -20px; margin-bottom: 25px; color: grey; text-align: center;">Isilah data diri dibawah dengan benar!</p>
         <form method="post">
             <div class="mb-3">
-                <label for="judul" class="form-label">Judul Kampanye Penggalangan Dana</label>
-                <input type="text" class="form-control" id="" name="judul" required placeholder="Judul Kampanye Penggalangan Dana">
+                <label for="total_dana" class="form-label">Total Dana Yang Ingin Dicapai(Rp)</label>
+                <input type="text" class="form-control" id="" name="total_dana" required placeholder="Total Dana Yang Ingin Dicapai(Rp)">
             </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.php'">Kirim</button>
+            <div class="mb-3">
+                <label for="durasi_kampanye" class="form-label">Durasi Kampanye(Hari)</label>
+                <input type="text" class="form-control" id="" name="durasi_kampanye" required placeholder="Durasi Kampanye(Hari)">
+            </div>
+            <div class="mb-3">
+                <label for="kategori_penggalangan" class="form-label">Kategori Penggalangan Dana</label>
+                <input type="text" class="form-control" id="" name="kategori_penggalangan" required placeholder="Kategori Penggalangan Dana">
+            </div>
+            <div class="mb-3">
+                <label for="penggunaan_dana" class="form-label">Penggunaan Dana</label>
+                <input type="text" class="form-control" id="" name="penggunaan_dana" required placeholder="Penggunaan Dana">
+            </div>
+            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='../step1_galang.html'">Kirim</button>
         </form>
     </div>
 </div>
